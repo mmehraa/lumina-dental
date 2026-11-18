@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumina Dental | Gentle, modern dentistry in Austin</title>
+  <meta name="description" content="Check-ups, whitening, clear aligners, implants and same-day emergency care. Book online in under a minute." />
+  <meta name="theme-color" content="#0b3d5c" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/",
+        "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+        "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/",
+        "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.mjs"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Dentist","name":"Lumina Dental","telephone":"+1-555-013-7740","address":"88 Willow Lane, Austin, TX","openingHours":"Mo-Fr 08:00-18:00, Sa 09:00-14:00"}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="nav" id="nav">
+    <a href="#" class="logo" aria-label="Lumina Dental home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="var(--teal)"/><path d="M11 9c-2 0-3.3 1.5-3.3 3.7 0 2.7 1.1 4 1.6 6.8.5 2.4.9 5.5 2.3 5.5 1.3 0 1.5-3 2.2-4.9.3-.7 1-.7 1.3 0 .7 1.9.9 4.9 2.2 4.9 1.4 0 1.9-3.1 2.3-5.5.5-2.8 1.6-4.1 1.6-6.8C23.2 10.5 21.9 9 20 9c-1.5 0-2.4.9-4.5.9S12.5 9 11 9z" fill="#fff"/></svg>
+      Lumina<span>Dental</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#visit">Your visit</a>
+      <a href="#team">Team</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#book" class="btn btn-primary nav-cta">Book a visit</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#services">Services</a><a href="#results">Results</a><a href="#visit">Your visit</a><a href="#team">Team</a><a href="#faq">FAQ</a>
+    <a href="#book" class="btn btn-primary">Book a visit</a>
+  </div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-blob" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="pill hero-fade"><span class="dot"></span> Accepting new patients in Austin</p>
+          <h1 class="hero-title" data-hero-title>Healthy smiles, <em>gently</em> made.</h1>
+          <p class="lead hero-fade">Modern dentistry without the dread. 3D scans instead of goopy moulds, prices before treatment, and a team that actually explains things.</p>
+          <div class="hero-actions hero-fade">
+            <a href="#book" class="btn btn-primary btn-lg">Book your visit <span aria-hidden="true">→</span></a>
+            <a href="tel:+15550137740" class="btn btn-ghost btn-lg">Call (555) 013-7740</a>
+          </div>
+          <ul class="hero-proof hero-fade">
+            <li><strong>4.9</strong> <span class="stars" aria-label="4.9 out of 5 stars">★★★★★</span><br /><small>1,240 Google reviews</small></li>
+            <li><strong>15 yrs</strong><br /><small>caring for Austin</small></li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <canvas id="tooth" aria-label="3D model of a tooth" role="img"></canvas>
+          <div class="chip chip-a"><span class="chip-ic">✦</span> Whitening from $199</div>
+          <div class="chip chip-b"><span class="chip-ic">⏱</span> Same-day emergency</div>
+          <div class="chip chip-c"><span class="chip-ic">◎</span> Low-dose 3D imaging</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust marquee -->
+    <section class="trust" aria-label="Payment options">
+      <div class="marquee"><div class="marquee-track">
+        <span>Most PPO plans accepted</span><i>✦</i><span>HSA &amp; FSA welcome</span><i>✦</i><span>0% financing</span><i>✦</i><span>Free whitening for life*</span><i>✦</i><span>Evening appointments</span><i>✦</i><span>Kids' first visit free</span><i>✦</i>
+      </div></div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-fade>What we do</p>
+          <h2 data-split>Everything your smile needs, <em>under one roof.</em></h2>
+        </div>
+        <div class="services">
+          <article class="card tilt" data-fade>
+            <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M7 3c-2 0-3.5 1.6-3.5 4 0 3 1.2 4.5 1.8 7.5.5 2.6 1 6.5 2.6 6.5 1.4 0 1.6-3.5 2.4-5.5.3-.8 1.1-.8 1.4 0 .8 2 1 5.5 2.4 5.5 1.6 0 2.1-3.9 2.6-6.5.6-3 1.8-4.5 1.8-7.5 0-2.4-1.5-4-3.5-4-1.6 0-2.6 1-5 1S8.6 3 7 3z"/></svg></div>
+            <h3>Check-ups &amp; cleaning</h3><p>A thorough exam, gentle clean and polish, and a clear picture of your oral health.</p><span class="price">From $0 with insurance</span>
+          </article>
+          <article class="card tilt" data-fade>
+            <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8zM19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg></div>
+            <h3>Teeth whitening</h3><p>In-chair whitening up to eight shades brighter in one visit, or custom take-home trays.</p><span class="price">From $199</span>
+          </article>
+          <article class="card tilt" data-fade>
+            <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M4 8c0 6 3.5 10 8 10s8-4 8-10M7 8.5c0 4 2.2 6.5 5 6.5s5-2.5 5-6.5"/></svg></div>
+            <h3>Clear aligners</h3><p>Straighten your teeth with nearly invisible aligners. See your new smile in 3D first.</p><span class="price">From $89/mo</span>
+          </article>
+          <article class="card tilt" data-fade>
+            <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M8 3h8l-1 4H9zM9 7h6M9.5 10h5M10 13h4M10.5 16h3M11 19h2l-1 2z"/></svg></div>
+            <h3>Dental implants</h3><p>Permanent, natural-looking replacements for missing teeth, planned with guided surgery.</p><span class="price">Free consultation</span>
+          </article>
+          <article class="card tilt" data-fade>
+            <div class="card-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 14c1 1.5 2.4 2.2 4 2.2s3-.7 4-2.2M9 9.5h.01M15 9.5h.01"/></svg></div>
+            <h3>Kids' dentistry</h3><p>Fun, patient visits that build good habits. Ceiling TVs and prize box included.</p><span class="price">First visit free</span>
+          </article>
+          <article class="card tilt" data-fade>
+            <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+            <h3>Emergency care</h3><p>Toothache, chip or knocked-out tooth? Call before 2 pm and we will see you today.</p><span class="price">Same day</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before / after -->
+    <section class="section results" id="results">
+      <div class="container results-grid">
+        <div>
+          <p class="eyebrow" data-fade>Real difference</p>
+          <h2 data-split>Up to eight shades brighter <em>in one visit.</em></h2>
+          <p class="lead" data-fade>Drag the handle to compare. Our in-chair whitening is gentle on enamel and takes about an hour. Most patients watch a show and go home glowing.</p>
+          <ul class="ticks" data-fade>
+            <li>Sensitivity-free formula</li>
+            <li>Shade-matched to your skin tone</li>
+            <li>Free top-ups for life with regular check-ups</li>
+          </ul>
+        </div>
+        <figure class="compare" id="compare" data-fade>
+          <img src="https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?auto=format&fit=crop&w=1200&q=80" alt="Close-up of a smile after whitening" class="compare-after" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?auto=format&fit=crop&w=1200&q=80" alt="" class="compare-before" loading="lazy" />
+          <span class="tag tag-before">Before</span><span class="tag tag-after">After</span>
+          <div class="compare-handle" aria-hidden="true"><span>‹ ›</span></div>
+          <input type="range" min="0" max="100" value="50" aria-label="Before and after comparison" class="compare-range" />
+          <figcaption>Simulated preview for illustration.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- First visit timeline -->
+    <section class="section visit" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-sticky">
+          <p class="eyebrow">Your first visit</p>
+          <h2 data-split>Sixty calm minutes, <em>start to smile.</em></h2>
+          <p class="visit-count" aria-hidden="true"><span id="visit-num">01</span><small>/04</small></p>
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=75" alt="Bright treatment room at Lumina Dental" class="visit-img" loading="lazy" />
+        </div>
+        <ol class="steps">
+          <svg class="steps-line" viewBox="0 0 40 1000" preserveAspectRatio="none" aria-hidden="true">
+            <path class="line-bg" d="M20 0 C 40 125, 0 250, 20 375 S 40 625, 20 750 S 0 900, 20 1000" pathLength="1" />
+            <path class="line-fg" d="M20 0 C 40 125, 0 250, 20 375 S 40 625, 20 750 S 0 900, 20 1000" pathLength="1" />
+          </svg>
+          <li class="step"><span class="step-dot"></span><p class="step-time">0 – 10 min</p><h3>Say hello</h3><p>No clipboards. You fill in a short form on your phone before you arrive, then settle in with a coffee or herbal tea.</p></li>
+          <li class="step"><span class="step-dot"></span><p class="step-time">10 – 25 min</p><h3>3D scan &amp; X-rays</h3><p>A quick, low-dose digital scan. You see your teeth on the big screen while we walk you through them.</p></li>
+          <li class="step"><span class="step-dot"></span><p class="step-time">25 – 40 min</p><h3>Your plan, explained</h3><p>Clear options with prices up front. No pressure and no surprise bills, ever.</p></li>
+          <li class="step"><span class="step-dot"></span><p class="step-time">40 – 60 min</p><h3>Clean &amp; polish</h3><p>A gentle hygienist clean, and you leave feeling fresh with your next visit already booked.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" aria-label="Lumina in numbers">
+      <div class="container stats-grid">
+        <div><p class="stat" data-count="12000" data-suffix="+">12000+</p><p>Happy patients</p></div>
+        <div><p class="stat" data-count="4.9" data-decimals="1">4.9</p><p>Average rating</p></div>
+        <div><p class="stat" data-count="15">15</p><p>Years in Austin</p></div>
+        <div><p class="stat" data-count="98" data-suffix="%">98%</p><p>Would recommend us</p></div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-fade>Meet the team</p>
+          <h2 data-split>Friendly faces, <em>steady hands.</em></h2>
+        </div>
+        <div class="team">
+          <figure class="member" data-fade>
+            <div class="member-img"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=700&h=880&q=75" alt="Dr. Sofia Reyes" loading="lazy" /></div>
+            <figcaption><h3>Dr. Sofia Reyes</h3><p>Founder · Cosmetic dentistry</p><small>DDS, UT Health · 15 years</small></figcaption>
+          </figure>
+          <figure class="member" data-fade>
+            <div class="member-img"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=700&h=880&q=75" alt="Dr. Marcus Hale" loading="lazy" /></div>
+            <figcaption><h3>Dr. Marcus Hale</h3><p>Implants &amp; oral surgery</p><small>DMD, Penn · 11 years</small></figcaption>
+          </figure>
+          <figure class="member" data-fade>
+            <div class="member-img"><img src="https://images.unsplash.com/photo-1770134223774-13b735e29201?auto=format&fit=crop&w=700&h=880&q=75" alt="Dr. Leah Okafor" loading="lazy" /></div>
+            <figcaption><h3>Dr. Leah Okafor</h3><p>Orthodontics &amp; aligners</p><small>DDS, MS · 9 years</small></figcaption>
+          </figure>
+          <figure class="member" data-fade>
+            <div class="member-img"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&h=880&q=75" alt="Dr. Arjun Mehta" loading="lazy" /></div>
+            <figcaption><h3>Dr. Arjun Mehta</h3><p>Family &amp; kids' dentistry</p><small>DDS, Michigan · 7 years</small></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews" id="reviews">
+      <div class="container"><div class="section-head">
+        <p class="eyebrow" data-fade>Patient stories</p>
+        <h2 data-split>People leave <em>smiling.</em> Literally.</h2>
+      </div></div>
+      <div class="marquee reviews-row"><div class="marquee-track" data-reviews="0"></div></div>
+      <div class="marquee reviews-row reverse"><div class="marquee-track" data-reviews="1"></div></div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section book" id="book">
+      <div class="container book-grid">
+        <div class="book-copy">
+          <p class="eyebrow light" data-fade>Book online</p>
+          <h2 data-split>Your visit, booked in <em>under a minute.</em></h2>
+          <p class="lead" data-fade>Pick a service and a time that suits you. We'll text a confirmation and a reminder the day before.</p>
+          <ul class="book-info" data-fade>
+            <li><span>Address</span>88 Willow Lane, Austin, TX</li>
+            <li><span>Hours</span>Mon–Fri 8am–6pm · Sat 9am–2pm</li>
+            <li><span>Phone</span><a href="tel:+15550137740">(555) 013-7740</a></li>
+          </ul>
+        </div>
+
+        <div class="booking" id="booking" data-fade>
+          <div class="booking-progress"><span id="booking-bar"></span></div>
+          <p class="booking-step-label" id="booking-label">Step 1 of 3 · Choose a service</p>
+
+          <form id="booking-form" novalidate>
+            <fieldset class="bstep is-active" data-step="0">
+              <legend class="sr-only">Service</legend>
+              <div class="svc-grid">
+                <label class="svc"><input type="radio" name="service" value="Check-up & clean" required /><span><b>Check-up &amp; clean</b><small>60 min</small></span></label>
+                <label class="svc"><input type="radio" name="service" value="Teeth whitening" /><span><b>Teeth whitening</b><small>75 min</small></span></label>
+                <label class="svc"><input type="radio" name="service" value="Aligner consult" /><span><b>Aligner consult</b><small>30 min · free</small></span></label>
+                <label class="svc"><input type="radio" name="service" value="Emergency" /><span><b>Emergency</b><small>Same day</small></span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="bstep" data-step="1">
+              <legend class="sr-only">Date and time</legend>
+              <div class="dates" id="dates" role="radiogroup" aria-label="Date"></div>
+              <div class="times" id="times" role="radiogroup" aria-label="Time"></div>
+            </fieldset>
+
+            <fieldset class="bstep" data-step="2">
+              <legend class="sr-only">Your details</legend>
+              <label class="field">Full name<input name="name" autocomplete="name" required /></label>
+              <label class="field">Mobile number<input name="phone" type="tel" autocomplete="tel" required /></label>
+              <label class="field">Email<input name="email" type="email" autocomplete="email" required /></label>
+              <label class="check"><input type="checkbox" name="newPatient" checked /> I'm a new patient</label>
+            </fieldset>
+
+            <div class="bstep bdone" data-step="3" aria-live="polite">
+              <svg viewBox="0 0 52 52" class="done-check" aria-hidden="true"><circle cx="26" cy="26" r="24" /><path d="M15 27l7 7 15-16" /></svg>
+              <h3>You're booked in!</h3>
+              <p id="booking-summary"></p>
+              <button type="button" class="btn btn-ghost" id="booking-again">Book another visit</button>
+            </div>
+
+            <p class="booking-error" id="booking-error" role="alert"></p>
+            <div class="booking-nav">
+              <button type="button" class="btn btn-ghost" id="booking-back" hidden>← Back</button>
+              <button type="submit" class="btn btn-primary" id="booking-next">Continue →</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container faq-grid">
+        <div>
+          <p class="eyebrow" data-fade>Good questions</p>
+          <h2 data-split>Things people <em>ask us.</em></h2>
+        </div>
+        <div class="faq">
+          <div class="faq-item" data-fade>
+            <button class="faq-q" aria-expanded="false">Do you take my insurance?<span aria-hidden="true"></span></button>
+            <div class="faq-a"><div><p>We're in-network with most PPO plans and we'll file the claim for you. Send us your plan details and we'll confirm your coverage before your visit.</p></div></div>
+          </div>
+          <div class="faq-item" data-fade>
+            <button class="faq-q" aria-expanded="false">I'm nervous about the dentist. Can you help?<span aria-hidden="true"></span></button>
+            <div class="faq-a"><div><p>Absolutely. Tell us when you book. We offer longer appointments, noise-cancelling headphones, hand signals to pause anytime and, where appropriate, gentle sedation.</p></div></div>
+          </div>
+          <div class="faq-item" data-fade>
+            <button class="faq-q" aria-expanded="false">How much does a check-up cost without insurance?<span aria-hidden="true"></span></button>
+            <div class="faq-a"><div><p>A new-patient exam with X-rays and a clean is $149. You'll always see prices before any treatment starts.</p></div></div>
+          </div>
+          <div class="faq-item" data-fade>
+            <button class="faq-q" aria-expanded="false">Is teeth whitening safe?<span aria-hidden="true"></span></button>
+            <div class="faq-a"><div><p>Yes, when done professionally. We check your teeth and gums first and use a sensitivity-free formula that protects your enamel.</p></div></div>
+          </div>
+          <div class="faq-item" data-fade>
+            <button class="faq-q" aria-expanded="false">What counts as a dental emergency?<span aria-hidden="true"></span></button>
+            <div class="faq-a"><div><p>Severe pain, swelling, a broken or knocked-out tooth, or bleeding that won't stop. Call us. If we can't see you today, we'll tell you exactly what to do.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><p class="footer-title">Visit</p><p>88 Willow Lane<br />Austin, TX 78704</p></div>
+      <div><p class="footer-title">Hours</p><p>Mon–Fri 8am–6pm<br />Sat 9am–2pm</p></div>
+      <div><p class="footer-title">Contact</p><p><a href="tel:+15550137740">(555) 013-7740</a><br /><a href="mailto:hello@luminadental.example">hello@luminadental.example</a></p></div>
+      <div><a href="#book" class="btn btn-primary">Book a visit</a></div>
+    </div>
+    <p class="footer-word" aria-hidden="true">Lumina</p>
+    <p class="container footer-legal">© <span id="year"></span> Lumina Dental. A portfolio concept. *With regular check-ups. Photos from Unsplash.</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
